@@ -4,7 +4,10 @@
 module.exports = {
   siteMetadata: {
     title: `Kostis Dimitra`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.kostisdimitra.gr`
   },
-  plugins: ["gatsby-plugin-postcss"]
+  plugins: [
+    "gatsby-plugin-postcss",
+    "gatsby-plugin-sass"
+  ]
 };
