@@ -1,0 +1,11 @@
+.handsWrapper{
+    //@apply w-screen h-auto;
+    padding-bottom: 84%;
+}
+@media (min-aspect-ratio: 2677/2255){
+    .handsWrapper{
+        //@apply h-screen;
+        height: 80vh;
+        padding-bottom: 0;
+    }
+}
