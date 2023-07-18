@@ -1,11 +1,181 @@
-.handsWrapper{
+.handsWrapper {
     //@apply w-screen h-auto;
     padding-bottom: 84%;
 }
-@media (min-aspect-ratio: 2677/2255){
-    .handsWrapper{
+
+.leafWrapper {
+    position: absolute;
+    width: 15%;
+    mix-blend-mode: multiply;
+}
+@media (min-aspect-ratio: 320/568){
+    .leafWrapper {
+        width: 11%;
+    }
+}
+@media (min-aspect-ratio: 1.2/1){
+    .leafWrapper {
+        width: 7%;
+    }
+}
+
+.leavesOrange1 {
+    top: 5%;
+    left: 90%;
+    transform: rotate(150deg) scale(1.4);
+}
+
+.leavesOrangeFaded1 {
+    top: 5%;
+    left: 70%;
+    transform: rotate(180deg);
+}
+
+.leavesOrangeFaded2 {
+    top: 15%;
+    left: 15%;
+    transform: rotate(100deg);
+}
+
+.leavesOrangeFaded3 {
+    top: 50%;
+    left: 15%;
+    transform: rotate(180deg) scale(1.3);
+}
+
+.leavesOrangeFaded4 {
+    top: 46%;
+    left: 47%;
+    transform: rotate(30deg) scale(2.2);
+}
+
+.leavesOrangeFaded5 {
+    top: 85%;
+    left: 70%;
+    transform: rotate(220deg) scale(1.8);
+}
+
+.leavesPurple1 {
+    top: -3%;
+    left: 50%;
+}
+
+.leavesPurple2 {
+    top: 2%;
+    left: 25%;
+    transform: rotate(10deg) scale(1.6);
+}
+
+.leavesPurple3{
+    top: 20%;
+    left: 70%;
+    transform: rotate(140deg) scale(1.2);
+}
+
+.leavesPurple4{
+    top: 20%;
+    left: -3%;
+    transform: rotate(330deg) scale(0.9);
+}
+
+.leavesPurple5 {
+    top: 25%;
+    left: 85%;
+    transform: rotate(330deg) scale(1.2);
+}
+
+.leavesPurple6 {
+    top: 30%;
+    left: 15%;
+    transform: rotate(30deg) scale(1.7);
+}
+
+.leavesPurple7 {
+    top: 55%;
+    left: 80%;
+    transform: rotate(40deg) scale(1.3);
+}
+
+.leavesPurple8 {
+    top: 55%;
+    left: -5%;
+}
+
+.leavesPurple9 {
+    top: 80%;
+    left: 30%;
+    transform: rotate(350deg) scale(1.3);
+}
+
+.leavesPurpleFaded1 {
+    top: 0;
+    left: 4%;
+    transform: rotate(135deg);
+}
+
+.leavesPurpleFaded2 {
+    top: 10%;
+    left: 50%;
+    transform: rotate(40deg) scale(1.6);
+}
+
+.leavesPurpleFaded3{
+    top: 20%;
+    left: 35%;
+    transform: rotate(250deg) scale(1.1);
+}
+
+.leavesPurpleFaded4{
+    top: 35%;
+    left: 60%;
+    transform: rotate(190deg) scale(-2, 2);
+}
+
+.leavesPurpleFaded5 {
+    top: 40%;
+    left: -5%;
+    transform: rotate(230deg) scale(1.4);
+}
+
+.leavesPurpleFaded6 {
+    top: 37%;
+    left: 90%;
+    transform: rotate(90deg) scale(1.3);
+}
+
+.leavesPurpleFaded7 {
+    top: 60%;
+    left: 25%;
+    transform: rotate(210deg) scale(1.6);
+}
+
+.leavesPurpleFaded8 {
+    top: 65%;
+    left: 5%;
+    transform: rotate(100deg) scale(1.3);
+}
+
+.leavesPurpleFaded9 {
+    top: 65%;
+    left: 55%;
+    transform: rotate(350deg) scale(1.4);
+}
+
+.leavesPurpleFaded10 {
+    top: 87%;
+    left: 5%;
+    transform: rotate(170deg) scale(1.7);
+}
+
+.leavesPurpleFaded11 {
+    top: 90%;
+    left: 45%;
+}
+
+@media (min-aspect-ratio: 2677/2255) {
+    .handsWrapper {
         //@apply h-screen;
-        height: 80vh;
+        height: 100vh;
         padding-bottom: 0;
     }
 }
