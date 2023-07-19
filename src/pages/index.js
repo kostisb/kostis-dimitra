@@ -34,33 +34,17 @@ const IndexPage = () => {
     }
   }, [copied])
   const [hero, animate] = useAnimate();
-  const [heroImagesLoaded, setHeroImagesLoaded] = useState(false);
   useEffect(()=>{
-    const heroImages = hero.current.querySelectorAll('img');
-    let loadedCount = 0;
-    heroImages.forEach((image)=>{
-      image.addEventListener('load',()=>{
-        loadedCount++;
-        if(loadedCount === heroImages.length){
-          setHeroImagesLoaded(true);
-        }
-      })
-    })
+    animate('.blurrer', {
+      opacity: 0
+    }, {
+      delay: 2,
+      duration: 1
+    });
   }, [])
-  useEffect(()=>{
-    if(heroImagesLoaded){
-      animate('.blurrer', {
-        // y: '100%',
-        opacity: 0
-      }, {
-        delay: 2,
-        duration: 1
-      });
-    }
-  }, [heroImagesLoaded])
   return (
     <main style={{}}>
-      <div className={`relative ${styles.handsWrapper} ${heroImagesLoaded ? 'opacity-100' : 'opacity-0'}`} ref={hero}>
+      <div className={`relative ${styles.handsWrapper}`} ref={hero}>
         <div className={`blurrer fixed z-10 pointer-events-none w-full h-screen overflow-hidden backdrop-blur-sm bg-white/50 ${styles.leavesWrapper}`}>
           <div className={`${styles.leafWrapper} ${styles.leavesOrange1}`}><img src={leavesOrange1} alt={''} /></div>
           <div className={`${styles.leafWrapper} ${styles.leavesOrangeFaded1}`}><img src={leavesOrangeFaded2} alt={''} /></div>
