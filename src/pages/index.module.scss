@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .handsWrapper {
     //@apply w-screen h-auto;
     padding-bottom: 84%;
@@ -177,5 +179,137 @@
         //@apply h-screen;
         height: 100vh;
         padding-bottom: 0;
+    }
+}
+.mapWrapper{
+    position: relative;
+    padding-bottom: 130%;
+    height: 0;
+    iframe{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        max-height: 90vh;
+    }
+}
+@media (min-aspect-ratio: 1/1) {
+    .mapWrapper {
+        padding-bottom: 60%;
+    }
+}
+
+.whoKParentsLabel{
+    width: math.ceil(math.div(614px, 3.5));
+}
+.whoKParentsValue1{
+    width: math.ceil(math.div(590px, 3.5));
+}
+.whoKParentsValue2{
+    width: math.ceil(math.div(629px, 3.5));
+}
+.whoDParentsLabel{
+    width: math.ceil(math.div(600px, 3.5));
+}
+.whoDParentsValue1{
+    width: math.ceil(math.div(533px, 3.5));
+}
+.whoDParentsValue2{
+    width: math.ceil(math.div(326px, 3.5));
+}
+.whoBestsLabel{
+    width: math.ceil(math.div(321px, 3.5));
+}
+.whoBestsValue1{
+    width: math.ceil(math.div(488px, 3.5));
+}
+.whoBestsValue2{
+    width: math.ceil(math.div(300px, 3.5));
+}
+@screen sm {
+    .whoKParentsLabel{
+        width: math.ceil(math.div(614px, 3));
+    }
+    .whoKParentsValue1{
+        width: math.ceil(math.div(590px, 3));
+    }
+    .whoKParentsValue2{
+        width: math.ceil(math.div(629px, 3));
+    }
+    .whoDParentsLabel{
+        width: math.ceil(math.div(600px, 3));
+    }
+    .whoDParentsValue1{
+        width: math.ceil(math.div(533px, 3));
+    }
+    .whoDParentsValue2{
+        width: math.ceil(math.div(326px, 3));
+    }
+    .whoBestsLabel{
+        width: math.ceil(math.div(321px, 3));
+    }
+    .whoBestsValue1{
+        width: math.ceil(math.div(488px, 3));
+    }
+    .whoBestsValue2{
+        width: math.ceil(math.div(300px, 3));
+    }
+}
+@screen md {
+    .whoKParentsLabel{
+        width: math.ceil(math.div(614px, 2.7));
+    }
+    .whoKParentsValue1{
+        width: math.ceil(math.div(590px, 2.7));
+    }
+    .whoKParentsValue2{
+        width: math.ceil(math.div(629px, 2.7));
+    }
+    .whoDParentsLabel{
+        width: math.ceil(math.div(600px, 2.7));
+    }
+    .whoDParentsValue1{
+        width: math.ceil(math.div(533px, 2.7));
+    }
+    .whoDParentsValue2{
+        width: math.ceil(math.div(326px, 2.7));
+    }
+    .whoBestsLabel{
+        width: math.ceil(math.div(321px, 2.7));
+    }
+    .whoBestsValue1{
+        width: math.ceil(math.div(488px, 2.7));
+    }
+    .whoBestsValue2{
+        width: math.ceil(math.div(300px, 2.7));
+    }
+}
+
+@screen xl {
+    .whoKParentsLabel{
+        width: math.ceil(math.div(614px, 3));
+    }
+    .whoKParentsValue1{
+        width: math.ceil(math.div(590px, 3));
+    }
+    .whoKParentsValue2{
+        width: math.ceil(math.div(629px, 3));
+    }
+    .whoDParentsLabel{
+        width: math.ceil(math.div(600px, 3));
+    }
+    .whoDParentsValue1{
+        width: math.ceil(math.div(533px, 3));
+    }
+    .whoDParentsValue2{
+        width: math.ceil(math.div(326px, 3));
+    }
+    .whoBestsLabel{
+        width: math.ceil(math.div(321px, 3));
+    }
+    .whoBestsValue1{
+        width: math.ceil(math.div(488px, 3));
+    }
+    .whoBestsValue2{
+        width: math.ceil(math.div(300px, 3));
     }
 }
