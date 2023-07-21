@@ -54,7 +54,8 @@ const IndexPage = () => {
 		<main style={{}}>
 			<div className={`hero relative ${styles.handsWrapper}`} ref={hero}>
 				<div
-					className={`blurrer fixed z-10 pointer-events-none w-full h-screen overflow-hidden backdrop-blur-sm bg-white/50 ${styles.leavesWrapper}`}>
+					className={`blurrer fixed z-10 pointer-events-none w-full h-screen overflow-hidden backdrop-blur-sm bg-white/50`}>
+					<div className={`${styles.leafWrapper} ${styles.logo}`}><img src={logo} alt={''}/></div>
 					<div className={`${styles.leafWrapper} ${styles.leavesOrange1}`}><img src={leavesOrange1} alt={''}/></div>
 					<div className={`${styles.leafWrapper} ${styles.leavesOrangeFaded1}`}><img src={leavesOrangeFaded2} alt={''}/>
 					</div>
@@ -98,82 +99,100 @@ const IndexPage = () => {
 					<div className={`${styles.leafWrapper} ${styles.leavesPurpleFaded11}`}><img src={leavesPurpleFaded2}
 																																											alt={''}/></div>
 				</div>
-				<div className={'absolute w-full h-full'} style={{background: '#f6ecdc'}}></div>
-				<img src={figure} alt={''} className={'absolute w-full h-full object-contain object-right'}/>
-				<img src={hands} alt={''} className={'absolute w-full h-full object-contain object-right'}/>
-				<img src={logo} alt={''} className={'absolute w-16 sm:w-20 md:w-24 lg:w-36 left-4'}/>
-				<div className="texts">
-					<img src={text1} alt={''} className={'absolute w-full h-full object-contain object-right'}/>
-					<img src={text2} alt={''} className={'absolute w-full h-full object-contain object-right'}/>
-					<img src={text3} alt={''} className={'absolute w-full h-full object-contain object-right'}/>
-					<img src={text4} alt={''} className={'absolute w-full h-full object-contain object-right'}/>
-					<img src={text5} alt={''} className={'absolute w-full h-full object-contain object-right'}/>
-					<img src={text6} alt={''} className={'absolute w-full h-full object-contain object-right'}/>
+				<div className="hero-main absolute w-full h-full">
+					<div className={'absolute w-full h-full'} style={{background: '#f6ecdc'}}></div>
+					<img src={figure} alt={''} className={`${styles.heroElement}`}/>
+					<img src={hands} alt={''} className={`${styles.heroElement}`}/>
+					<div className="texts">
+						<img src={text1} alt={''} className={`${styles.heroElement}`}/>
+						<img src={text2} alt={''} className={`${styles.heroElement}`}/>
+						<img src={text3} alt={''} className={`${styles.heroElement}`}/>
+						<img src={text4} alt={''} className={`${styles.heroElement}`}/>
+						<img src={text5} alt={''} className={`${styles.heroElement}`}/>
+						<img src={text6} alt={''} className={`${styles.heroElement}`}/>
+					</div>
 				</div>
 			</div>
 			<div className={`main px-4 py-24 md:py-36 lg:py-44`}>
-				<div className={'max-w-screen-sm mx-auto'}>
-					<img src={mainWhenWhere} width={750} alt={''} className={'w-full max-w-xl mx-auto mb-16 lg:mb-32'}/>
-				</div>
-				<div className={'max-w-screen-sm mx-auto mb-16 lg:mb-32'}>
-					<div className="flex flex-col gap-6">
-						<div className={'xl:flex justify-center gap-4'}>
-							<img src={whoKParentsLabel} width={614} alt={''}
-									 className={`max-w-full mx-auto xl:mx-0 ${styles.whoKParentsLabel}`}/>
-							<div className={'max-w-full md:flex justify-center gap-2 mx-auto xl:mx-0'}>
-								<img src={whoKParentsValue1} width={590} alt={''}
-										 className={`max-w-full mx-auto md:mx-0 ${styles.whoKParentsValue1}`}/>
-								<img src={whoKParentsValue2} width={629} alt={''}
-										 className={`max-w-full mx-auto md:mx-0 ${styles.whoKParentsValue2}`}/>
+				<div className="mx-auto max-w-screen-sm mb-24">
+					<img src={mainWhenWhere} width={1500} alt={''} className={`max-w-full mx-auto mb-16 lg:mb-32 ${styles.mainWhenWhere}`}/>
+					<div className={'mb-16 lg:mb-32'}>
+						<div className="flex flex-col gap-6">
+							<div className={'xl:flex justify-center gap-4'}>
+								<img src={whoKParentsLabel} width={614} alt={''}
+										 className={`max-w-full mx-auto xl:mx-0 ${styles.whoKParentsLabel}`}/>
+								<div className={'max-w-full md:flex justify-center gap-2 mx-auto xl:mx-0'}>
+									<img src={whoKParentsValue1} width={590} alt={''}
+											 className={`max-w-full mx-auto md:mx-0 ${styles.whoKParentsValue1}`}/>
+									<img src={whoKParentsValue2} width={629} alt={''}
+											 className={`max-w-full mx-auto md:mx-0 ${styles.whoKParentsValue2}`}/>
+								</div>
 							</div>
-						</div>
-						<div className={'xl:flex justify-center gap-4'}>
-							<img src={whoDParentsLabel} width={600} alt={''}
-									 className={`max-w-full mx-auto xl:mx-0 ${styles.whoDParentsLabel}`}/>
-							<div className={'max-w-full md:flex justify-center gap-2 mx-auto xl:mx-0'}>
-								<img src={whoDParentsValue1} width={533} alt={''}
-										 className={`max-w-full mx-auto md:mx-0 ${styles.whoDParentsValue1}`}/>
-								<img src={whoDParentsValue2} width={326} alt={''}
-										 className={`max-w-full mx-auto md:mx-0 ${styles.whoDParentsValue2}`}/>
+							<div className={'xl:flex justify-center gap-4'}>
+								<img src={whoDParentsLabel} width={600} alt={''}
+										 className={`max-w-full mx-auto xl:mx-0 ${styles.whoDParentsLabel}`}/>
+								<div className={'max-w-full md:flex justify-center gap-2 mx-auto xl:mx-0'}>
+									<img src={whoDParentsValue1} width={533} alt={''}
+											 className={`max-w-full mx-auto md:mx-0 ${styles.whoDParentsValue1}`}/>
+									<img src={whoDParentsValue2} width={326} alt={''}
+											 className={`max-w-full mx-auto md:mx-0 ${styles.whoDParentsValue2}`}/>
+								</div>
 							</div>
-						</div>
-						<div className={'xl:flex justify-center gap-4'}>
-							<img src={whoBestsLabel} width={321} alt={''}
-									 className={`max-w-full mx-auto xl:mx-0 ${styles.whoBestsLabel}`}/>
-							<div className={'max-w-full md:flex justify-center gap-2 mx-auto xl:mx-0'}>
-								<img src={whoBestsValue1} width={488} alt={''}
-										 className={`max-w-full mx-auto md:mx-0 ${styles.whoBestsValue1}`}/>
-								<img src={whoBestsValue2} width={300} alt={''}
-										 className={`max-w-full mx-auto md:mx-0 ${styles.whoBestsValue2}`}/>
+							<div className={'xl:flex justify-center gap-4'}>
+								<img src={whoBestsLabel} width={321} alt={''}
+										 className={`max-w-full mx-auto xl:mx-0 ${styles.whoBestsLabel}`}/>
+								<div className={'max-w-full md:flex justify-center gap-2 mx-auto xl:mx-0'}>
+									<img src={whoBestsValue1} width={488} alt={''}
+											 className={`max-w-full mx-auto md:mx-0 ${styles.whoBestsValue1}`}/>
+									<img src={whoBestsValue2} width={300} alt={''}
+											 className={`max-w-full mx-auto md:mx-0 ${styles.whoBestsValue2}`}/>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div className={'max-w-xs mx-auto'}>
-					<img src={mainRestInfo} width={357} alt={''} className={'w-full max-w-4xl mx-auto mb-16'}/>
-					<p className={`text-center ${copied ? '' : 'invisible'} text-[#A293E4] mb-4`}>το IBAN αντιγράφηκε!</p>
-					<img src={mainIban} width={466} alt={''} className={'w-full max-w-2xl mx-auto cursor-pointer '}
-							 onClick={() => {
-								 navigator.clipboard.writeText('GR3201104690000046900148779').then(
-									 () => {
-										 setCopied(true);
-										 console.log('successfully copied IBAN to your clipboard');
-									 },
-									 () => {
-										 console.log('error copying IBAN to clipboard');
-									 }
-								 )
-							 }}/>
-				</div>
-			</div>
-			<div className={'map mb-24 px-2'}>
-				<div className={'max-w-4xl mx-auto'}>
-					<div className={`${styles.mapWrapper}`}>
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3136.158716204169!2d23.8542118!3d38.1829872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a175d480ea0129%3A0x1744cc4ea5ba4a82!2zzprPhM6uzrzOsSAyOA!5e0!3m2!1sen!2sgr!4v1689870669340!5m2!1sen!2sgr&z=2"
-							width="600" height="450" style={{border: 0}} allowFullScreen="" loading="lazy"
-							referrerPolicy="no-referrer-when-downgrade"/>
+					<img src={mainRestInfo} width={714} alt={''} className={`max-w-full mx-auto mb-16 ${styles.mainRestInfo}`}/>
+					<div className="text-center text-lg">
+						<div className="mb-24">
+							<p className={'font-bold text-[#E37938] tracking-wider'}>
+								- τηλέφωνο Κ : <a href={'tel:+306997040549'}>6997040549</a>
+							</p>
+							<p className={'font-bold text-[#E37938] tracking-wider'}>
+								- τηλέφωνο Δ : <a href={'tel:+306981104151'}>6981104151</a>
+							</p>
+						</div>
+						<div className={'font-bold text-lg text-[#A293E4] tracking-wider mb-4'}>
+							{copied ? (
+								<p>το IBAN αντιγράφηκε!</p>
+							) : (
+								<p>
+									IBAN : <button className={'tracking-wider'} onClick={() => {
+									navigator.clipboard.writeText('GR3201104690000046900148779').then(
+										() => {
+											setCopied(true);
+											console.log('successfully copied IBAN to your clipboard');
+										},
+										() => {
+											console.log('error copying IBAN to clipboard');
+										}
+									)
+								}}>GR3201104690000046900148779</button>
+								</p>
+							)}
+						</div>
 					</div>
+				</div>
+				<div className={'map mb-24'}>
+					<div className={'max-w-4xl mx-auto'}>
+						<div className={`${styles.mapWrapper}`}>
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3136.158716204169!2d23.8542118!3d38.1829872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a175d480ea0129%3A0x1744cc4ea5ba4a82!2zzprPhM6uzrzOsSAyOA!5e0!3m2!1sen!2sgr!4v1689870669340!5m2!1sen!2sgr&z=2"
+								width="600" height="450" style={{border: 0}} allowFullScreen="" loading="lazy"
+								referrerPolicy="no-referrer-when-downgrade"/>
+						</div>
+					</div>
+				</div>
+				<div className={'mx-auto text-center'}>
+					<img src={logo} width={173} alt={''} className={'inline-block'}/>
 				</div>
 			</div>
 		</main>
@@ -182,4 +201,17 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => {
+	const titles = ['Κ + Δ', 'L.F.e.A.e.'];
+	const [index, setIndex] = useState(0);
+	useEffect(() => {
+		setInterval(() => {
+			const newIndex = (index === 0 ? 1 : 0);
+			setIndex(newIndex);
+		}, 10000);
+	}, []);
+	useEffect(() => {
+		document.title = titles[index];
+	}, [index]);
+	return (<title>{titles[0]}</title>);
+}
