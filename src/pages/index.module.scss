@@ -23,24 +23,24 @@
         @apply object-contain object-right;
     }
 }
-.leafWrapper {
+.leafWrapper, .logoWrapper {
     position: absolute;
     width: 15%;
     mix-blend-mode: multiply;
 }
 @media (min-aspect-ratio: 320/568){
-    .leafWrapper {
+    .leafWrapper, .logoWrapper {
         width: 11%;
     }
 }
 @media (min-aspect-ratio: 1.2/1){
-    .leafWrapper {
+    .leafWrapper, .logoWrapper {
         width: 7%;
     }
 }
 .logo{
-    bottom: 5%;
-    left: 5%;
+    top: 2%;
+    left: 2%;
     min-width: 70px;
 }
 .leavesOrange1 {
@@ -57,7 +57,7 @@
 
 .leavesOrangeFaded2 {
     top: 15%;
-    left: 15%;
+    left: 23%;
     transform: rotate(100deg);
 }
 
@@ -68,7 +68,7 @@
 }
 
 .leavesOrangeFaded4 {
-    top: 46%;
+    top: 55%;
     left: 47%;
     transform: rotate(30deg) scale(2.2);
 }
@@ -86,7 +86,7 @@
 
 .leavesPurple2 {
     top: 2%;
-    left: 25%;
+    left: 30%;
     transform: rotate(10deg) scale(1.6);
 }
 
@@ -97,7 +97,7 @@
 }
 
 .leavesPurple4{
-    top: 20%;
+    top: 30%;
     left: -3%;
     transform: rotate(330deg) scale(0.9);
 }
@@ -110,7 +110,7 @@
 
 .leavesPurple6 {
     top: 30%;
-    left: 15%;
+    left: 20%;
     transform: rotate(30deg) scale(1.7);
 }
 
@@ -121,19 +121,19 @@
 }
 
 .leavesPurple8 {
-    top: 55%;
+    top: 65%;
     left: -5%;
 }
 
 .leavesPurple9 {
     top: 80%;
-    left: 45%;
+    left: 25%;
     transform: rotate(350deg) scale(1.3);
 }
 
 .leavesPurpleFaded1 {
-    top: 0;
-    left: 4%;
+    top: -3%;
+    left: 17%;
     transform: rotate(135deg);
 }
 
@@ -156,7 +156,7 @@
 }
 
 .leavesPurpleFaded5 {
-    top: 40%;
+    top: 45%;
     left: -5%;
     transform: rotate(230deg) scale(1.4);
 }
@@ -168,7 +168,7 @@
 }
 
 .leavesPurpleFaded7 {
-    top: 60%;
+    top: 70%;
     left: 35%;
     transform: rotate(210deg) scale(1.6);
 }
@@ -187,13 +187,13 @@
 
 .leavesPurpleFaded10 {
     top: 87%;
-    left: 30%;
+    left: 5%;
     transform: rotate(170deg) scale(1.7);
 }
 
 .leavesPurpleFaded11 {
     top: 90%;
-    left: 60%;
+    left: 45%;
 }
 .mapWrapper{
     position: relative;

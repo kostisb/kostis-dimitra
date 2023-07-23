@@ -29,7 +29,7 @@ import whoBestsValue2 from "/src/images/who-bests-value-2.png";
 import mainRestInfo from "/src/images/main-rest-info.png";
 import mainIban from "/src/images/main-iban.png";
 import * as styles from "./index.module.scss";
-import {motion, useAnimate} from "framer-motion";
+import {motion, stagger, useAnimate} from "framer-motion";
 import {useEffect, useState} from "react";
 
 const IndexPage = () => {
@@ -42,74 +42,93 @@ const IndexPage = () => {
 		}
 	}, [copied])
 	const [hero, animate] = useAnimate();
-	useEffect(() => {
-		animate('.blurrer', {
+	const sequence = [
+		['.leaf-wrapper img', {
+			scaleX: [0, 1],
+			scaleY: [0.5, 1]
+		}, {
+			delay: stagger(0.05, {startDelay: 1}),
+			ease: 'backOut',
+			duration: 0.6
+		}],
+		['.hero-figure', {opacity: [0,1]}, {duration: 1}],
+		['.hero-hands', {opacity: [0,1]}, {duration: 1}],
+		['.blurrer', {
 			opacity: 0
 		}, {
 			delay: 2,
 			duration: 1
-		});
+		}],
+		['.hero-text', {
+			opacity: [0, 1],
+		}, {
+			delay: stagger(1),
+			duration: 0.6
+		}],
+	]
+	useEffect(() => {
+		animate(sequence);
 	}, [])
 	return (
 		<main style={{}}>
 			<div className={`hero relative ${styles.handsWrapper}`} ref={hero}>
 				<div
 					className={`blurrer fixed z-10 pointer-events-none w-full h-screen overflow-hidden backdrop-blur-sm bg-white/50`}>
-					<div className={`${styles.leafWrapper} ${styles.logo}`}><img src={logo} alt={''}/></div>
-					<div className={`${styles.leafWrapper} ${styles.leavesOrange1}`}><img src={leavesOrange1} alt={''}/></div>
-					<div className={`${styles.leafWrapper} ${styles.leavesOrangeFaded1}`}><img src={leavesOrangeFaded2} alt={''}/>
+					<div className={`logo-wrapper ${styles.logoWrapper} ${styles.logo}`}><img src={logo} alt={''}/></div>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesOrange1}`}><img src={leavesOrange1} alt={''}/></div>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesOrangeFaded1}`}><img src={leavesOrangeFaded2} alt={''}/>
 					</div>
-					<div className={`${styles.leafWrapper} ${styles.leavesOrangeFaded2}`}><img src={leavesOrangeFaded2} alt={''}/>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesOrangeFaded2}`}><img src={leavesOrangeFaded2} alt={''}/>
 					</div>
-					<div className={`${styles.leafWrapper} ${styles.leavesOrangeFaded3}`}><img src={leavesOrangeFaded1} alt={''}/>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesOrangeFaded3}`}><img src={leavesOrangeFaded1} alt={''}/>
 					</div>
-					<div className={`${styles.leafWrapper} ${styles.leavesOrangeFaded4}`}><img src={leavesOrangeFaded1} alt={''}/>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesOrangeFaded4}`}><img src={leavesOrangeFaded1} alt={''}/>
 					</div>
-					<div className={`${styles.leafWrapper} ${styles.leavesOrangeFaded5}`}><img src={leavesOrangeFaded1} alt={''}/>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesOrangeFaded5}`}><img src={leavesOrangeFaded1} alt={''}/>
 					</div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurple1}`}><img src={leavesPurple3} alt={''}/></div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurple2}`}><img src={leavesPurple2} alt={''}/></div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurple3}`}><img src={leavesPurple1} alt={''}/></div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurple4}`}><img src={leavesPurple2} alt={''}/></div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurple5}`}><img src={leavesPurple3} alt={''}/></div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurple6}`}><img src={leavesPurple1} alt={''}/></div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurple7}`}><img src={leavesPurple1} alt={''}/></div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurple8}`}><img src={leavesPurple3} alt={''}/></div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurple9}`}><img src={leavesPurple3} alt={''}/></div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurpleFaded1}`}><img src={leavesPurpleFaded1} alt={''}/>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurple1}`}><img src={leavesPurple3} alt={''}/></div>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurple2}`}><img src={leavesPurple2} alt={''}/></div>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurple3}`}><img src={leavesPurple1} alt={''}/></div>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurple4}`}><img src={leavesPurple2} alt={''}/></div>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurple5}`}><img src={leavesPurple3} alt={''}/></div>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurple6}`}><img src={leavesPurple1} alt={''}/></div>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurple7}`}><img src={leavesPurple1} alt={''}/></div>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurple8}`}><img src={leavesPurple3} alt={''}/></div>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurple9}`}><img src={leavesPurple3} alt={''}/></div>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurpleFaded1}`}><img src={leavesPurpleFaded1} alt={''}/>
 					</div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurpleFaded2}`}><img src={leavesPurpleFaded1} alt={''}/>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurpleFaded2}`}><img src={leavesPurpleFaded1} alt={''}/>
 					</div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurpleFaded3}`}><img src={leavesPurpleFaded1} alt={''}/>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurpleFaded3}`}><img src={leavesPurpleFaded1} alt={''}/>
 					</div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurpleFaded4}`}><img src={leavesPurpleFaded2} alt={''}/>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurpleFaded4}`}><img src={leavesPurpleFaded2} alt={''}/>
 					</div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurpleFaded5}`}><img src={leavesPurpleFaded2} alt={''}/>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurpleFaded5}`}><img src={leavesPurpleFaded2} alt={''}/>
 					</div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurpleFaded6}`}><img src={leavesPurpleFaded2} alt={''}/>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurpleFaded6}`}><img src={leavesPurpleFaded2} alt={''}/>
 					</div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurpleFaded7}`}><img src={leavesPurpleFaded2} alt={''}/>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurpleFaded7}`}><img src={leavesPurpleFaded2} alt={''}/>
 					</div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurpleFaded8}`}><img src={leavesPurpleFaded2} alt={''}/>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurpleFaded8}`}><img src={leavesPurpleFaded2} alt={''}/>
 					</div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurpleFaded9}`}><img src={leavesPurpleFaded1} alt={''}/>
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurpleFaded9}`}><img src={leavesPurpleFaded1} alt={''}/>
 					</div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurpleFaded10}`}><img src={leavesPurpleFaded2}
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurpleFaded10}`}><img src={leavesPurpleFaded2}
 																																											alt={''}/></div>
-					<div className={`${styles.leafWrapper} ${styles.leavesPurpleFaded11}`}><img src={leavesPurpleFaded2}
+					<div className={`leaf-wrapper ${styles.leafWrapper} ${styles.leavesPurpleFaded11}`}><img src={leavesPurpleFaded2}
 																																											alt={''}/></div>
 				</div>
 				<div className="hero-main absolute w-full h-full">
 					<div className={'absolute w-full h-full'} style={{background: '#f6ecdc'}}></div>
-					<img src={figure} alt={''} className={`${styles.heroElement}`}/>
-					<img src={hands} alt={''} className={`${styles.heroElement}`}/>
+					<img src={figure} alt={''} className={`hero-figure ${styles.heroElement}`}/>
+					<img src={hands} alt={''} className={`hero-hands ${styles.heroElement}`}/>
 					<div className="texts">
-						<img src={text1} alt={''} className={`${styles.heroElement}`}/>
-						<img src={text2} alt={''} className={`${styles.heroElement}`}/>
-						<img src={text3} alt={''} className={`${styles.heroElement}`}/>
-						<img src={text4} alt={''} className={`${styles.heroElement}`}/>
-						<img src={text5} alt={''} className={`${styles.heroElement}`}/>
-						<img src={text6} alt={''} className={`${styles.heroElement}`}/>
+						<img src={text1} alt={''} className={`hero-text hero-text1 ${styles.heroElement}`}/>
+						<img src={text2} alt={''} className={`hero-text hero-text2 ${styles.heroElement}`}/>
+						<img src={text3} alt={''} className={`hero-text hero-text3 ${styles.heroElement}`}/>
+						<img src={text4} alt={''} className={`hero-text hero-text4 ${styles.heroElement}`}/>
+						<img src={text5} alt={''} className={`hero-text hero-text5 ${styles.heroElement}`}/>
+						<img src={text6} alt={''} className={`hero-text hero-text6 ${styles.heroElement}`}/>
 					</div>
 				</div>
 			</div>
