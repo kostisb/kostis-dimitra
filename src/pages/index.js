@@ -221,16 +221,5 @@ const IndexPage = () => {
 export default IndexPage
 
 export const Head = () => {
-	const titles = ['Κ + Δ', 'L.F.e.A.e.'];
-	const [index, setIndex] = useState(0);
-	useEffect(() => {
-		setInterval(() => {
-			const newIndex = (index === 0 ? 1 : 0);
-			setIndex(newIndex);
-		}, 10000);
-	}, []);
-	useEffect(() => {
-		document.title = titles[index];
-	}, [index]);
-	return (<title>{titles[0]}</title>);
+	return <title>Κ + Δ = L.F.e.A.e.</title>;
 }
