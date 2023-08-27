@@ -212,7 +212,7 @@ const IndexPage = () => {
 									<p>το IBAN αντιγράφηκε!</p>
 								) : (
 									<p>
-										IBAN : <button className={'tracking-wider'} onClick={() => {
+										IBAN (Εθνική Τράπεζα): <button className={'tracking-wider'} onClick={() => {
 										navigator.clipboard.writeText('GR3201104690000046900148779').then(
 											() => {
 												setCopied(true);
